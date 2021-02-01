@@ -1,9 +1,8 @@
 # Trie
 
-Trie abstract data type. 
+The Trie (pronounced "try") data structure is a type of Tree. This data structure is widely used to store characters. Some of the main benefits of a Trie is looking up a word or a part of a word. It benefits from quick lookup of a word or parts of a word.  
 
-Great for doing validation of words. 
-
+## Objectives
 
 ## Resources 
 
