@@ -2,6 +2,8 @@
 
 Trie abstract data type. 
 
+Great for doing validation of words. 
+
 
 ## Resources 
 
