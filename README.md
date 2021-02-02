@@ -25,6 +25,33 @@ class TrieNode {
 }
 ```
 
+## Trie Implementation 
+
+```swift 
+class Trie {
+  private var root: TrieNode
+  
+  init() {
+    self.root = TrieNode("*")
+  }
+  
+  // inserts a word into the Trie
+  func insert() {
+    
+  }
+  
+  // returns true if the word is in the Trie
+  func search() {
+    
+  }
+  
+  // returns true if there is any word in the Trie that starts with the given prefix
+  func startsWith() {
+    
+  }
+}
+```
+
 ## Resources 
 
 1. [Wikipedia - Trie](https://en.wikipedia.org/wiki/Trie)
