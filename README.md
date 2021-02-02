@@ -22,6 +22,15 @@ class TrieNode {
     self.isCompleteWord = false
     self.children = [:]
   }
+  
+  // add a new child to the node's children
+  public func add(_ child: Character) {
+    // check to see if the node already exist
+    guard children[child] == nil else { return }
+    
+    // if not, create a new child
+    children[child] = TrieNode(child, parent: self)
+  }
 }
 ```
 
