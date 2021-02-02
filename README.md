@@ -7,6 +7,24 @@ The Trie (pronounced "try") data structure is a type of Tree. This data structur
 * Understand benefits of the Trie data structure.
 * Be able to implemeent the Trie data structure.
 
+## Implementation of a Trie Node 
+
+```swift 
+class TrieNode {
+  var char: Character
+  var isCompleteWord: Bool
+  var children: [Character: TrieNode]
+  var parent: TrieNode?
+  
+  init(_ char: Character, parent: TrieNode? = nil) {
+    self.char = char
+    self.parent = parent
+    self.isCompleteWord = false
+    self.children = [:]
+  }
+}
+```
+
 ## Resources 
 
 1. [Wikipedia - Trie](https://en.wikipedia.org/wiki/Trie)
