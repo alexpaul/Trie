@@ -44,21 +44,88 @@ class Trie {
     self.root = TrieNode("*")
   }
   
+  private func getNode(_ word: String) -> TrieNode? {
+    var currentNode = root
+    for char in word {
+      guard let childNode = currentNode.children[char] else { return nil } // return nil if any node does not exist for a character
+      
+      // traverse the path where the "word" exist
+      currentNode = childNode
+    }
+    return currentNode // we've found the node for the "word"
+  }
+  
   // inserts a word into the Trie
-  func insert() {
+  func insert(_ word: String) {
+    var currentNode = root
     
+    // traverse the "word" and perform insertion accordingly
+    for char in word {
+      // look up children nodes to find out if node already exist
+      if let childNode = currentNode.children[char] {
+        // if it exist simply move down the path
+        currentNode = childNode
+      } else {
+        // if the node does not exist, create and add a new child
+        currentNode.add(char)
+        
+        // then move down the Trie
+        guard let childNode = currentNode.children[char] else { return }
+        currentNode = childNode
+      }
+    }
+    
+    // check if word is already marked complete
+    guard !currentNode.isCompleteWord else { return }
+    
+    // mark work complete
+    currentNode.isCompleteWord = true
   }
   
   // returns true if the word is in the Trie
-  func search() {
-    
+  func search(_ word: String) -> Bool {
+    guard let node = getNode(word) else { return false }
+    return node.isCompleteWord
   }
   
   // returns true if there is any word in the Trie that starts with the given prefix
-  func startsWith() {
-    
+  func startsWith(_ prefix: String) -> Bool {
+    guard let _ = getNode(prefix) else { return false }
+    return true
   }
 }
+```
+
+## Testing our Trie implementation 
+
+```swift 
+/*
+                         *
+                        /
+                       s
+                      / \
+                     w   a
+                    / \   \
+                   i   e   t
+                  /     \   \
+                 f       e   *
+                /         \
+               t           t
+              /             \
+             *               *
+*/
+
+
+let trie = Trie()
+trie.insert("swift")
+trie.insert("sweet")
+trie.insert("sat")
+
+trie.search("swift") // true
+trie.search("objectivec") // false
+
+trie.startsWith("swe") // true
+trie.startsWith("swa") // fasle
 ```
 
 ## Resources 
