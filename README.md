@@ -11,10 +11,10 @@ The Trie (pronounced "try") data structure is a type of Tree. This data structur
 
 ```swift 
 class TrieNode {
-  var char: Character
-  var isCompleteWord: Bool
-  var children: [Character: TrieNode]
-  var parent: TrieNode?
+  var char: Character // the character of the node
+  var isCompleteWord: Bool // bool to indicate if the path is a complete word
+  var children: [Character: TrieNode] // the children of the parent node
+  var parent: TrieNode? // parent useful in thhe case of deleting nodes
   
   init(_ char: Character, parent: TrieNode? = nil) {
     self.char = char
