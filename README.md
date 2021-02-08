@@ -11,6 +11,8 @@ The Trie (pronounced "try") data structure is a type of Tree. This data structur
 * Be able to search for a word in a Trie. 
 * Be able to search for a prefix of a word in a Trie. 
 
+![sketch of a trie data structure](https://user-images.githubusercontent.com/1819208/107219945-be85df00-69df-11eb-9959-f8d8f577c7e5.jpg)
+
 ## Implementation of a Trie Node 
 
 A Trie node has the following properties: 
