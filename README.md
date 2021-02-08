@@ -49,6 +49,15 @@ class TrieNode {
 
 ## Trie Implementation 
 
+The Trie data structure has a `root` node like a regular Tree structure. 
+
+We will be implementing the following methods on the Trie: 
+
+* `insert()` 
+* `getNode()`
+* `search()`
+* `prefix()`
+
 ```swift 
 class Trie {
   private var root: TrieNode
