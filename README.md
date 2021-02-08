@@ -5,6 +5,7 @@ The Trie (pronounced "try") data structure is a type of Tree. This data structur
 ## Objectives
 
 * Understand benefits of the Trie data structure.
+* Be able to implement a Trie Node. 
 * Be able to implemeent the Trie data structure.
 * Be able to insert a new word into a Trie. 
 * Be able to search for a word in a Trie. 
