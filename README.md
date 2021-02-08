@@ -6,6 +6,9 @@ The Trie (pronounced "try") data structure is a type of Tree. This data structur
 
 * Understand benefits of the Trie data structure.
 * Be able to implemeent the Trie data structure.
+* Be able to insert a new word into a Trie. 
+* Be able to search for a word in a Trie. 
+* Be able to search for a prefix of a word in a Trie. 
 
 ## Implementation of a Trie Node 
 
