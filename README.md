@@ -13,6 +13,15 @@ The Trie (pronounced "try") data structure is a type of Tree. This data structur
 
 ## Implementation of a Trie Node 
 
+A Trie node has the following properties: 
+
+* the `char` to store. 
+* children nodes 
+* its parent 
+* a property to determine if a word is complete 
+
+We will also be adding a method to be able to add child nodes to the Trie node called `add()`. 
+
 ```swift 
 class TrieNode {
   var char: Character // the character of the node
